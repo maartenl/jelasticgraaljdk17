@@ -34,7 +34,7 @@ COPY mariadb-java-client-3.1.0.jar /home/jelastic/libs
 
 COPY postboot /home/jelastic/server
 
-COPY jvm.sh /etc/init.d/jvm
+# COPY jvm.sh /etc/init.d/jvm
 
 ENTRYPOINT ["/bin/bash"]       
 
