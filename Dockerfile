@@ -8,6 +8,12 @@ LABEL engine=graalvm17 engineGroupId=graalvm engineName="GraalVM CE" engineType=
 
 LABEL GRAALVM_VERSION=22.3.0
 
+ENV JAVA_VERSION=17.0.5
+
+ARG JAVA_VERSION
+
+RUN /bin/sh -c "echo 'export JAVA_VERSION=17.0.5' >> /etc/bashrc"
+
 # remove the old graalvm (java11)
 RUN /bin/sh -c "rm -rf /usr/java/graalvm-${GRAALVM_VERSION}"
 
